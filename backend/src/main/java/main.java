@@ -1,22 +1,13 @@
-import model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import repository.UserRepository;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
-@Component
 public class main {
-
-    @Autowired
-    private static UserRepository repository;
+    private static EntityManagerFactory entityManagerFactory;
+    private static EntityManager entityManager;
     public static void main(String[] args) {
-        User user = new User();
 
-
-
-
-        user.setName("Rhuan");
-        repository.insert(user);
-
-
+            entityManagerFactory = Persistence.createEntityManagerFactory("postgresql-home");
+            entityManager = entityManagerFactory.createEntityManager();
     }
 }
