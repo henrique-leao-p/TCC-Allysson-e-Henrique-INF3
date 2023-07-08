@@ -3,6 +3,7 @@ package model;
 import jakarta.persistence.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Entity
 @Table(name = "user", schema = "matchup")
@@ -33,6 +34,9 @@ public class User {
     @OneToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "address_id")
     private Address address;
+
+    @OneToMany(mappedBy = "contact")
+    private List<Contact> contac
 
     public User() {
 

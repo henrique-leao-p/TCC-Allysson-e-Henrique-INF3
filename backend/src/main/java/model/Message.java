@@ -33,6 +33,10 @@ public class Message {
     @Column(name = "status_viewed", nullable = false)
     private boolean statusViewed;
 
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "contact_id1")
+    private Contact contact;
+
     //constructors
 
     public Message() {

@@ -2,6 +2,8 @@ package model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Contact", schema = "matchup")
 public class Contact {
@@ -15,6 +17,13 @@ public class Contact {
     @Id
     @Column(name = "contact_id2", nullable = false)
     private long id_user2;
+
+    @ManyToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @OneToMany(mappedBy = "message_id")
+    private List<Message> message;
 
     //constructors
 
