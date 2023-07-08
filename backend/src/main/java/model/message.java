@@ -15,7 +15,7 @@ public class message {
     private long id;
 
     @Column(name = "hashed_content", nullable = false, length = 1023)
-    private String hashedContent;
+    private Byte hashedContent;
 
     @Column(name = "date", nullable = false)
     private Date date;
@@ -38,7 +38,7 @@ public class message {
 
     }
 
-    public message(long id, String hashedContent, Date date, String extension, String senderName, String recipientName, boolean statusViewed) {
+    public message(long id, Byte hashedContent, Date date, String extension, String senderName, String recipientName, boolean statusViewed) {
         this.id = id;
         this.hashedContent = hashedContent;
         this.date = date;
@@ -54,11 +54,11 @@ public class message {
         return id;
     }
 
-    public String getHashedContent() {
+    public Byte getHashedContent() {
         return hashedContent;
     }
 
-    public void setHashedContent(String hashedContent) {
+    public void setHashedContent(Byte hashedContent) {
         this.hashedContent = hashedContent;
     }
 
