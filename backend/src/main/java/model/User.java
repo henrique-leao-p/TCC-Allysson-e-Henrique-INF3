@@ -12,9 +12,6 @@ public class User {
     @Column(name = "name", length = 222)
     private String name;
 
-    @Column(name = "age", length = 3, nullable = false)
-    private int age;
-
     public long getId() {
         return id;
     }
@@ -26,6 +23,4 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }
