@@ -2,7 +2,6 @@ package model;
 
 import jakarta.persistence.*;
 
-import java.awt.image.BufferedImage;
 import java.util.Arrays;
 
 @Entity

@@ -6,7 +6,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "Message", schema = "matchup")
-public class message {
+public class Message {
 
     //attributes
 
@@ -35,11 +35,11 @@ public class message {
 
     //constructors
 
-    public message() {
+    public Message() {
 
     }
 
-    public message(long id, Byte hashedContent, Date date, String extension, String senderName, String recipientName, boolean statusViewed) {
+    public Message(long id, Byte hashedContent, Date date, String extension, String senderName, String recipientName, boolean statusViewed) {
         this.id = id;
         this.hashedContent = hashedContent;
         this.date = date;

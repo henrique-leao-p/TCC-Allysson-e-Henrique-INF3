@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Contact", schema = "matchup")
-public class contact {
+public class Contact {
 
     //attributes
 
@@ -18,11 +18,11 @@ public class contact {
 
     //constructors
 
-    public contact() {
+    public Contact() {
 
     }
 
-    public contact(long id_user1, long id_user2) {
+    public Contact(long id_user1, long id_user2) {
         //implement something to get the ids from the respective users right away
         this.id_user1 = id_user1;
         this.id_user2 = id_user2;
