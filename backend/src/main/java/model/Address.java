@@ -3,12 +3,13 @@ package model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "address")
+@Table(name = "address", schema = "matchup")
 public class Address {
 
     //attributes
 
     @Id
+    @Column(name = "address_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
@@ -27,8 +28,10 @@ public class Address {
     @Column(name = "zipcode", nullable = false, length = 12)
     private int zipcode;
 
-    //constructors
+    @OneToOne(mappedBy = "address")
+    private User user;
 
+    //constructors
     public Address() {
 
     }

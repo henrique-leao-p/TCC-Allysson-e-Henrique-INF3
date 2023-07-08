@@ -6,9 +6,10 @@ import java.awt.image.BufferedImage;
 import java.util.Arrays;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user", schema = "matchup")
 public class User {
     @Id
+    @Column(name = "user_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
@@ -29,6 +30,10 @@ public class User {
 
     @Column(name = "profile_picture", length = 455)
     private Byte[] profilePicture;
+
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "address_id")
+    private Address address;
 
     public User() {
 
