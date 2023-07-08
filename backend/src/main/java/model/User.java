@@ -16,7 +16,7 @@ public class User {
     private int age;
 
     @Column(name = "email", nullable = false)
-    private int email;
+    private String email;
 
 
     public long getId() {
