@@ -9,8 +9,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "name", length = 222)
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "email")
+    private String email;
 
     public long getId() {
         return id;
