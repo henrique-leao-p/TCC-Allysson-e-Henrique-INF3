@@ -41,14 +41,21 @@ public class User {
 
     }
 
-    public User(long id, String name, String email, int age, String hashedPassword, String cellphoneNumber, Byte[] profilePicture) {
-        this.id = id;
+    public User(String name, String email, int age, String hashedPassword, String cellphoneNumber, Byte[] profilePicture) {
         this.name = name;
         this.email = email;
         this.age = age;
         this.hashedPassword = hashedPassword;
         this.cellphoneNumber = cellphoneNumber;
         this.profilePicture = profilePicture;
+    }
+
+    public User(String name, String email, int age, String hashedPassword, String cellphoneNumber) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.hashedPassword = hashedPassword;
+        this.cellphoneNumber = cellphoneNumber;
     }
 
     public long getId() {
