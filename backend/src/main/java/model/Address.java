@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "address")
-public class address {
+public class Address {
 
     //attributes
 
@@ -29,11 +29,11 @@ public class address {
 
     //constructors
 
-    public address() {
+    public Address() {
 
     }
 
-    public address(long id, int number, String street, String neighborhood, String state, int zipcode) {
+    public Address(long id, int number, String street, String neighborhood, String state, int zipcode) {
         this.id = id;
         this.number = number;
         this.street = street;
