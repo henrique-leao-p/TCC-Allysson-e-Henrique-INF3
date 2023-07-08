@@ -2,7 +2,7 @@ package model;
 
 import jakarta.persistence.*;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "Message", schema = "matchup")
@@ -19,7 +19,7 @@ public class Message {
     private Byte hashedContent;
 
     @Column(name = "date", nullable = false)
-    private Date date;
+    private Timestamp date;
 
     @Column(name = "extension", nullable = false, length = 5)
     private String extension;
@@ -43,7 +43,7 @@ public class Message {
 
     }
 
-    public Message(long id, Byte hashedContent, Date date, String extension, String senderName, String recipientName, boolean statusViewed) {
+    public Message(long id, Byte hashedContent, Timestamp date, String extension, String senderName, String recipientName, boolean statusViewed) {
         this.id = id;
         this.hashedContent = hashedContent;
         this.date = date;
@@ -67,11 +67,11 @@ public class Message {
         this.hashedContent = hashedContent;
     }
 
-    public Date getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 
