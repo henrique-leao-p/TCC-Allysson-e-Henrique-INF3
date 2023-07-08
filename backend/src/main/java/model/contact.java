@@ -3,17 +3,17 @@ package model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "contact")
+@Table(name = "Contact", schema = "matchup")
 public class contact {
 
     //attributes
 
     @Id
-    @Column(nullable = false)
+    @Column(name = "contact_id1", nullable = false)
     private long id_user1;
 
     @Id
-    @Column(nullable = false)
+    @Column(name = "contact_id2", nullable = false)
     private long id_user2;
 
     //constructors

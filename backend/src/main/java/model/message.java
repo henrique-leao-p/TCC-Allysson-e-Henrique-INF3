@@ -5,12 +5,13 @@ import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity
-@Table(name = "message")
+@Table(name = "Message", schema = "matchup")
 public class message {
 
     //attributes
 
     @Id
+    @Column(name = "message_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
