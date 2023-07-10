@@ -6,17 +6,18 @@ import java.util.List;
 
 @Entity
 @Table(name = "Contact", schema = "matchup")
+@IdClass(ContactID.class)
 public class Contact {
 
     //attributes
 
     @Id
     @Column(name = "contact_id1", nullable = false)
-    private long id_user1;
+    private long idUser1;
 
     @Id
     @Column(name = "contact_id2", nullable = false)
-    private long id_user2;
+    private long idUser2;
 
     @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "user_id")
@@ -33,20 +34,25 @@ public class Contact {
 
     public Contact(long id_user1, long id_user2) {
         //implement something to get the ids from the respective users right away
-        this.id_user1 = id_user1;
-        this.id_user2 = id_user2;
+        this.idUser1 = id_user1;
+        this.idUser2 = id_user2;
     }
 
     //encapsulation
 
-    public long getId_user1() {
-        return id_user1;
+    public long getIdUser1() {
+        return idUser1;
     }
 
-    public long getId_user2() {
-        return id_user2;
+    public long getIdUser2() {
+        return idUser2;
     }
 
     //methods
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
 }
