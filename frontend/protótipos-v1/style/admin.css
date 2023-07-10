@@ -10862,6 +10862,7 @@
   
   .bg-login-image {
     background: url("https://cdn.pixabay.com/photo/2023/05/05/15/25/insect-7972717_1280.jpg");
+    /*background: url("https://img.freepik.com/free-vector/skull-gaming-with-joy-stick-emblem-modern-style_32991-492.jpg?size=626&ext=jpg&ga=GA1.1.838174844.1689009637&semt=sph");*/
     background-position: left;
     background-size: cover;
   }
