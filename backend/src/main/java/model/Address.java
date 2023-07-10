@@ -92,4 +92,10 @@ public class Address {
     }
 
     //methods
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
 }

@@ -109,4 +109,9 @@ public class Message {
 
     //methods
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
 }

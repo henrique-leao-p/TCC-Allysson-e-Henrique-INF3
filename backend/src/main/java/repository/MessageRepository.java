@@ -2,14 +2,15 @@ package repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import model.User;
+import model.Message;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserRepository {
+public class MessageRepository {
+
     @PersistenceContext
     private EntityManager entityManager;
 
-    public void insert(User user) {entityManager.merge(user);}
+    public void insert(Message message) {entityManager.merge(message);}
 
 }
